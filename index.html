@@ -97,6 +97,17 @@
       <div class="toolbar">Toolbar</div>
     </div>
   </div>
+
+  <script>
+    var initHeight = document.body.clientHeight
+    document.body.style.height = initHeight + 'px'
+    window.addEventListener('resize', function () {
+      var newHeight = document.body.clientHeight
+      if (initHeight - newHeight < 140) {
+        document.body.style.height = newHeight + 'px'
+      }
+    })
+  </script>
 </body>
 
 </html>
